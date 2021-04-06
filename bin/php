@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-symfony php "$@"
+"$SYMFONY_BINARY" php "$@"

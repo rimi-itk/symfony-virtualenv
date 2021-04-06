@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-symfony composer "$@"
+"$SYMFONY_BINARY" composer "$@"

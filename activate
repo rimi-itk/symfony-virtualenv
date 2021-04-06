@@ -50,6 +50,9 @@ deactivate nondestructive
 VIRTUAL_ENV=$(cd "$(dirname "$filename")" && pwd)
 export VIRTUAL_ENV
 
+SYMFONY_BINARY=$(which symfony)
+export SYMFONY_BINARY
+
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH
@@ -76,6 +79,15 @@ fi
 if [ -n "${BASH:-}" ] || [ -n "${ZSH_VERSION:-}" ] ; then
   hash -r
 fi
+
+cat <<'EOF'
+
+Virtual symfony environment activated.
+
+Warning: Running the symfony binary in this environment will probably loop
+forever, so consider not running it.
+
+EOF
 
 # Local Variables:
 # mode: sh

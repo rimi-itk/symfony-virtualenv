@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+cat << EOF >&2
+The symfony binary should not be run in a virtual symfony environment.
+
+If you really want to run it, use
+
+  $SYMFONY_BINARY
+
+EOF
+exit 1
